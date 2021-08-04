@@ -304,7 +304,7 @@ class shapeSynthesis(object):
 		container[:,:,32:32*2]=rec_syn256[1]
 		container[:,:,32*2:32*3]=rec_syn256[2]
 		container[:,:,32*3:32*4]=rec_syn256[3]
-		nrrd.write('0_32_synthesized.nrrd',container,h)
+		nrrd.write('reconstructed.nrrd',container,h)
 
 
 
@@ -312,8 +312,8 @@ if __name__ == "__main__":
 	#original: (512, 512, 256)
 	#level 0:  (256, 256, 128)
 	#level 1:  (128, 128, 64)
-	f1='D:/global_local_feature/selecteddata/gt/032.nrrd'
-	f2='D:/global_local_feature/selecteddata/inial_pred/skull00.nrrd'
+	f1='../template_skull.nrrd'
+	f2='../coarse_skull.nrrd'
 	ss=shapeSynthesis()
 	retList,recList,h=ss.loadImages(f1,f2)
 	pyr_db, pyr_rec=ss.createPyramid(retList,recList)
