@@ -63,7 +63,7 @@ class shapeSynthesis(object):
 
 
 # add zero-padding for patch extraction
-# by default, patch size is 5
+# by default, patch size is 3
 
 	def createSparseblock(self,b):
 
