@@ -41,9 +41,9 @@ def morph(data):
 
 
 if __name__ == "__main__":
-    pred_dir='C:/Users/Jianning Li/Desktop/newBU/newBU/completion_results/test_Superres/implant/fix'
-    defect_dir="C:/Users/Jianning Li/Desktop/newBU/newBU/00_Challenge_Dataset/test_set/evaluation_defective_skull/fix"
-    save_dir='C:/Users/Jianning Li/Desktop/newBU/newBU/completion_results/test_Superres/implant_denoised/fix/'
+    pred_dir='../implant_obtained_via_subtraction'
+    defect_dir="../defective_skull"
+    save_dir='../save_denoised_implant/'
 
     pred_list=glob('{}/*.nrrd'.format(pred_dir))
     defect_list=glob('{}/*.nrrd'.format(defect_dir))
