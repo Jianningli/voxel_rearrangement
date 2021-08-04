@@ -35,4 +35,4 @@ sparse_hashtable['0b'+BitArray(temp).bin]=[x,y,z]
 ```
 
 
-Function _def NN_compute(self,dict_)_ pre-computes the bit string neighbors (not to be confused with the voxel neighbors). The larger the neighber size, the longer it takes for the pre-computation.
+Function _def NN_compute(self,dict)_ pre-computes the bit string neighbors (not to be confused with the voxel neighbors). The larger the neighber size, the longer it takes for the pre-computation.
