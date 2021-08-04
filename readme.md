@@ -16,7 +16,7 @@ def morph(data):
 ```
 
 
-**loader.py** : Data loader for patch-wise shape completion and patch-wise voxel rearrangement. During testing, using the following function to crop patches (128*128*64) from a skull.
+**loader.py** : Data loader for patch-wise shape completion and patch-wise voxel rearrangement. During testing, using the following function to crop patches (128x128x64) from a skull.
 
 ```python
 def make_random_test_patch(data):
@@ -36,9 +36,10 @@ def make_random_test_patch(data):
     return np.array(data_list)
  ```
 
-**skull_completion.py** : 
+**skull_completion.py** : for skull shape completion on downsampled skulls, patch-wise shape completion and patch-wise voxel rearrangement, the same autoencoder network is used. For testing, the output patches are sequentially combined as follows to form a final complete skulls (for each skull, the number of slices, i.e., Z is different).  
 
 ```python
+reconstructed=np.zeros(shape=(512,512,Z))
 zl=num_Z//64
 patch_idx=0
 for x in range(4):
