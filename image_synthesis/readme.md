@@ -36,3 +36,19 @@ sparse_hashtable['0b'+BitArray(temp).bin]=[x,y,z]
 
 
 Function _def NN_compute(self,dict)_ pre-computes the bit string neighbors (not to be confused with the voxel neighbors). The larger the neighber size, the longer it takes for the pre-computation.
+
+
+Hash table based approximate neareset neighbor search. Given a bit string _key_ from a coarse template, first search the hash table (db_ht_search) containing the actual keys and then search the hash table (nn_dict) created using the bit string neighbors, if no matching key was found in db_ht_search.
+
+```python
+n_match=0
+n_n_match=0
+for key,index in rec_ht.items():
+	if key in db_ht_search.keys():
+		n_match+=1
+		ii=db_ht_search.get(key)
+	
+	elif key in nn_dict.keys():
+		n_n_match+=1
+		ii=nn_dict.get(key)
+```
