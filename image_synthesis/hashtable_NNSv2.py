@@ -306,7 +306,7 @@ if __name__ == "__main__":
 	#level 0:  (256, 256, 128)
 	#level 1:  (128, 128, 64)
 	ss=shapeSynthesis()
-	retList,recList,h=ss.loadImages('000.nrrd','skull0.nrrd')
+	retList,recList,h=ss.loadImages('template_skull.nrrd','coarse_skull.nrrd')
 	pyr_db, pyr_rec=ss.createPyramid(retList,recList)
 	sparse_db, sparse_rec=ss.createSparseBlock(pyr_db,pyr_rec)
 	rec_syn256=ss.synthesis256(sparse_db,sparse_rec,pyr_db)
