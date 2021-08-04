@@ -16,11 +16,31 @@ def morph(data):
 ```
 
 
+**loader.py** : 
 
 ```python
-zl=zz//64
+def make_random_test_patch(data):
+    data_list=[]
+    a,b,c=data.shape
+    zz=(c//64)
+    for x in range(4):
+        for y in range(4):
+            for z in range(zz):            
+                temp_data=np.expand_dims(np.expand_dims(data[x*128:(x+1)*128,y*128:(y+1)*128,z*64:(z+1)*64],axis=0),axis=4)
+                data_list.append(temp_data)
+
+    for x in range(4):
+        for y in range(4):
+            temp_data=np.expand_dims(np.expand_dims(data[x*128:(x+1)*128,y*128:(y+1)*128,c-64:c],axis=0),axis=4)            
+            data_list.append(temp_data)
+    return np.array(data_list)
+ ```
+
+**skull_completion.py** : 
+
+```python
+zl=num_Z//64
 patch_idx=0
-t1=time.time()
 for x in range(4):
     for y in range(4):
         for z in range(zl):
