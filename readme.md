@@ -16,7 +16,7 @@ def morph(data):
 ```
 
 
-**loader.py** : 
+**loader.py** : Data loader for patch-wise shape completion and patch-wise voxel rearrangement. During testing, using the following function to crop patches (128*128*64) from a skull.
 
 ```python
 def make_random_test_patch(data):
