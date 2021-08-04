@@ -23,7 +23,13 @@ class Dictlist(dict):
 
 
 
-hamming distance between two bit strings:  ^ Binary XOR
+hamming distance between two bit strings:  ^ stands for Binary XOR
 ```python
 (bitStr1^bitStr2).count(1)
+```
+
+
+Build a hash table using the coordinates and bit strings. function _BitArray(binaryArray).bin_ converts a binary array to a bit string
+```python
+sparse_hashtable['0b'+BitArray(temp).bin]=[x,y,z]
 ```
