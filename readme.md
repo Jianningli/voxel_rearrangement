@@ -36,7 +36,7 @@ def make_random_test_patch(data):
     return np.array(data_list)
  ```
 
-**skull_completion.py** : for skull shape completion on downsampled skulls, patch-wise shape completion and patch-wise voxel rearrangement, the same autoencoder network is used. For testing, the output patches are sequentially combined as follows to form a final complete skulls (for each skull, the number of slices, i.e., Z is different).  
+**skull_completion.py** : for skull shape completion on downsampled skulls, patch-wise shape completion and patch-wise voxel rearrangement, the same autoencoder network is used. For testing of the two patch-based methods, the output patches are sequentially combined as follows to form a final complete skull (for each skull, the number of slices, i.e., Z is different).  
 
 ```python
 reconstructed=np.zeros(shape=(512,512,Z))
