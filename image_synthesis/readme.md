@@ -52,3 +52,9 @@ for key,index in rec_ht.items():
 		n_n_match+=1
 		ii=nn_dict.get(key)
 ```
+KD-tree-based nearest neighbor search: create a kd-tree on feature vectors and _query_ the tree given an entry. 
+
+```python
+tree=KDTree()
+distance,index = tree.query(np.reshape(blk_rec0_pca[i],(1,20)),k=1)
+```
