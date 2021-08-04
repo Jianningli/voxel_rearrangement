@@ -5,7 +5,9 @@
 
 
 
-''' python
-(blk_db0[ii]^tempblk).count(1)
 
-'''
+
+hamming distance between two bit strings:  ^ Binary XOR
+```python
+(bitStr1^bitStr2).count(1)
+```
