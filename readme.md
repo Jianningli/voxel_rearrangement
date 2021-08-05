@@ -1,4 +1,4 @@
-### Learning to Rearrange Voxels in BinarySegmentation Masks for Smooth Manifold Triangulation
+### Learning to Rearrange Voxels in Binary Segmentation Masks for Smooth Manifold Triangulation
 
 
 
