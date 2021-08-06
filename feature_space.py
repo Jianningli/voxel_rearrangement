@@ -111,7 +111,7 @@ model = ImportGraph()
 # feature representation of the database
 #os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 database_feature=[]
-database_dir="C:/Users/Jianning/Desktop/CAMedProject/MICCAI2020/newMiccai/database"
+database_dir="../database"
 pair_list=glob('{}/*.nrrd'.format(database_dir))
 
 '''
@@ -146,7 +146,7 @@ np.save('database_feature.npy',database_feature)
 database_feature=np.load('database_feature.npy')
 
 start_time = time.time()
-testimg='C:/Users/Jianning/Desktop/CAMedProject/MICCAI2020/newMiccai/test/A0152.nrrd'
+testimg='../testImg.nrrd'
 
 test,h=nrrd.read(testimg)
 test=test[:,:,test.shape[2]-128:test.shape[2]]
@@ -281,7 +281,7 @@ end_time1=time.time()
 print('synthesis time:',end_time1-start_time1)
 
 
-save_dir='C:/Users/Jianning/Desktop/CAMedProject/MICCAI2020/newMiccai/'
+save_dir='../save/'
 filename=save_dir+testimg[-10:-5]+'.nrrd'
 nrrd.write(filename,reconstructed.astype('float32'),h)
 
