@@ -1,4 +1,4 @@
-### Learning to Rearrange Voxels in Binary Segmentation Masks for Smooth Manifold Triangulation [pdf](https://arxiv.org/pdf/2108.05269.pdf)
+### Learning to Rearrange Voxels in Binary Segmentation Masks for Smooth Manifold Triangulation [[pdf](https://arxiv.org/pdf/2108.05269.pdf)]
 
 
 
