@@ -86,3 +86,8 @@ def loadImages(retrivedImg,reconstructedImg):
 		reconstructed_4=reconstructed[:,:,16*3:16*4]
 		return [r1_1,r1_2,r1_3,r1_4],[reconstructed_1,reconstructed_2,reconstructed_3,reconstructed_4],h
 ```
+The following python package is used to project the synthesis of each pacth to different CPU cores:
+
+```python
+from multiprocessing import Pool
+```
