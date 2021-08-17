@@ -66,7 +66,7 @@ Data parallelism
 
 ![alt text](https://github.com/Jianningli/voxel_rearrangement/blob/main/images/1.png)
 
-Load coarse images and template image and split the images into 4 equally sized patches:
+Load coarse image and template image and split the images into 4 equally sized patches:
 ```python
 def loadImages(retrivedImg,reconstructedImg):
 		print('loading images...')
