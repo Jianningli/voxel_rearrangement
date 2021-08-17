@@ -2,6 +2,9 @@
 
 
 
+![alt text](https://github.com/Jianningli/voxel_rearrangement/blob/main/images/pipeline.png)
+
+
 Dataset: [AutoImplant 2021 Challenge Task 3 Dataset](https://autoimplant2021.grand-challenge.org/Dataset/)
 
 
