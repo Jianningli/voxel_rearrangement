@@ -52,6 +52,9 @@ for key,index in rec_ht.items():
 		n_n_match+=1
 		ii=nn_dict.get(key)
 ```
+
+![alt text](https://github.com/Jianningli/voxel_rearrangement/blob/main/images/2.png)
+
 KD-tree-based nearest neighbor search: create a kd-tree on feature vectors and _query_ the tree given an entry. The feature vectors (i.e., the 3^3 voxel neighbors) are dimension reduced using PCA to accelerate search.
 
 ```python
