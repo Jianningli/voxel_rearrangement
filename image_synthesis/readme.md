@@ -61,3 +61,28 @@ KD-tree-based nearest neighbor search: create a kd-tree on feature vectors and _
 tree=KDTree(FEATURE VECTOR)
 distance,index = tree.query(ENTRY,(1,20)),k=1)
 ```
+
+Data parallelism 
+
+![alt text](https://github.com/Jianningli/voxel_rearrangement/blob/main/images/1.png)
+
+Load coarse images and template image and split the images into 4 equally sized patches:
+```python
+def loadImages(retrivedImg,reconstructedImg):
+		print('loading images...')
+		r1,h1=nrrd.read(retrivedImg)
+		#r1,h1=nrrd.read('000.nrrd')
+		r1_1=r1[:,:,0:64]
+		r1_2=r1[:,:,64:64*2]
+		r1_3=r1[:,:,64*2:64*3]
+		r1_4=r1[:,:,64*3:64*4]
+
+		#(128,128,64)
+		reconstructed,h=nrrd.read(reconstructedImg)			
+		#reconstructed,h=nrrd.read('skull0.nrrd')
+		reconstructed_1=reconstructed[:,:,0:16]
+		reconstructed_2=reconstructed[:,:,16:16*2]
+		reconstructed_3=reconstructed[:,:,16*2:16*3]
+		reconstructed_4=reconstructed[:,:,16*3:16*4]
+		return [r1_1,r1_2,r1_3,r1_4],[reconstructed_1,reconstructed_2,reconstructed_3,reconstructed_4],h
+```
