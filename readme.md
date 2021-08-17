@@ -55,3 +55,15 @@ for x in range(4):
         reconstructed[x*128:(x+1)*128,y*128:(y+1)*128,zz-64:zz]=test_output[0,:,:,:]
         patch_idx=patch_idx+1
  ```
+ 
+ 
+ If you find our repository useful or use the codes in your research, please use the following bibtex entry for reference:
+ 
+ ```
+ @article{li2021learning,
+  title={Learning to Rearrange Voxels in Binary Segmentation Masks for Smooth Manifold Triangulation},
+  author={Li, Jianning and Pepe, Antonio and Gsaxner, Christina and Jin, Yuan and Egger, Jan},
+  journal={arXiv preprint arXiv:2108.05269},
+  year={2021}
+}
+ ```
